@@ -26,6 +26,8 @@ namespace Full_GRASP_And_SOLID
             recipe.AddStep(new Step(GetProduct("Café"), 100, GetEquipment("Cafetera"), 120));
             recipe.AddStep(new Step(GetProduct("Leche"), 200, GetEquipment("Hervidor"), 60));
             recipe.PrintRecipe();
+
+            Console.WriteLine($"Costo de producción: {recipe.GetProductionCost()}");
         }
 
         private static void PopulateCatalogs()

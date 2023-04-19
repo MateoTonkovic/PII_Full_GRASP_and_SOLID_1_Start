@@ -15,8 +15,18 @@ namespace Full_GRASP_And_SOLID.Library
 
         public Product FinalProduct { get; set; }
 
+        public double GetProductionCost()
+        {
+            double total = 0;
+            foreach (Step step in this.steps)
+            {
+                total += step.GetStepCost();
+            }
+            return total;
+        }
         public void AddStep(Step step)
         {
+            
             this.steps.Add(step);
         }
 
