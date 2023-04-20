@@ -15,7 +15,7 @@ namespace Full_GRASP_And_SOLID.Library
 
         public Product FinalProduct { get; set; }
 
-        public double GetProductionCost()
+        public double GetProductionCost() // Para asignar esta responsabilidad se utiliza el Principio SRP, ya que esta se encarga únicamente de hacer los cálculos necesarios para obtener el costo total del producto final y no tiene responsabilidad sobre ningún otro tipo de información.
         {
             double total = 0;
             foreach (Step step in this.steps)
